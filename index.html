@@ -1,21 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ka">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moto Adventures</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<main>
-    <H1>თავგადასავალი ორ ბორბალზე</H1>
-    <div class="rides">
-    <div class="ride"><h2>ქალაქში გასეირნება</h2>
-    <p>მოტოციკლით გასეირნება ქალაქის მასშტაბით.</p>
-    </div>
-    <div class="ride"><h2>შორი მარშრუტი</h2>
-    <p>მოტოციკლით მოგზაურობა ქვეყნის მასშტაბით.</p>
-    </div>
-</main>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header class="intro">
+        <p class="eyebrow">MOTO ADVENTURES</p>
+        <h1>თავგადასავალი ორ ბორბალზე</h1>
+        <p class="intro-text">
+          ქალაქის ქუჩებიდან მთის გზებამდე — აირჩიე შენი მარშრუტი და აღმოაჩინე
+          ახალი ადგილები.
+        </p>
+      </header>
+
+      <section class="rides" aria-label="მოგზაურობის ტიპები">
+        <article class="ride">
+          <img
+            class="ride-image city-image"
+            src="images/city-ride.jpg"
+            alt="მოტოციკლისტი წითელი მოტოციკლით ქალაქის ქუჩაში"
+          />
+
+          <div class="ride-content">
+            <span class="ride-number">01 / CITY RIDE</span>
+            <h2>ქალაქში გასეირნება</h2>
+            <p>
+              ნაცნობი ქუჩები ახალი თვალით — მოკლე გასეირნება, საყვარელი ადგილები
+              და შესვენება ყავისთვის.
+            </p>
+          </div>
+        </article>
+
+        <article class="ride">
+          <img
+            class="ride-image mountain-image"
+            src="images/mountain-ride.jpg"
+            alt="მოტომოგზაური მთის გზაზე ხელს მაღლა სწევს"
+          />
+
+          <div class="ride-content">
+            <span class="ride-number">02 / LONG DISTANCE</span>
+            <h2>შორი მარშრუტი</h2>
+            <p>
+              დატოვე ქალაქის ხმაური უკან და გაუყევი მთის გზებს — ახალი ხედებისა
+              და დასამახსოვრებელი მოგზაურობისთვის.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <div class="actions">
+        <a class="button" href="#travel-photo"> ნახე მოგზაურობის ფოტო ↓ </a>
+      </div>
+
+      <figure class="travel" id="travel-photo">
+        <img
+          class="travel-image"
+          src="images/moto-trip.jpg"
+          alt="მოტოციკლისტი მოტოციკლზე ზის მთებისა და კლდოვანი პეიზაჟის ფონზე"
+        />
+        <figcaption>ახალი გზა, ახალი თავგადასავალი.</figcaption>
+      </figure>
+    </main>
+
+    <footer>
+      <p>© 2026 Moto Adventures · სასწავლო პროექტი</p>
+    </footer>
+  </body>
 </html>

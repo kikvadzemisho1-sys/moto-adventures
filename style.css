@@ -1,194 +1,263 @@
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #f5f0e8;
-    background: linear-gradient(135deg, #111519, #242b30);
-    line-height: 1.7;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #f5f0e8;
+  background: linear-gradient(135deg, #111519, #242b30);
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 100px 24px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 70px;
+}
+
+/* სათაური */
+.intro {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #f0a45d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
 }
 
 h1 {
-    max-width: 850px;
-    margin: 0 auto 65px;
-    font-size: 52px;
-    line-height: 1.25;
-    text-align: center;
-    color: #f5f0e8;
+  margin: 0;
+  font-size: clamp(28px, 5vw, 52px);
+  line-height: 1.3;
 }
 
 h1::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    margin: 28px auto 0;
-    background-color: #f0a45d;
-    border-radius: 2px;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 25px auto;
+  border-radius: 4px;
+  background-color: #f0a45d;
+}
+
+.intro-text {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #b7bec3;
+  font-size: 17px;
 }
 
 .rides {
-    display: flex;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .ride {
-    flex: 1;
-    min-width: 0;
-    padding: 35px;
-    background-color: #ffffff08;
-    border: 1px solid #ffffff1f;
-    border-top: 3px solid #f0a45d;
-    border-radius: 12px;
-
-    transition:
-        transform 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease;
+  overflow: hidden;
+  background-color: #20272c;
+  border: 1px solid #ffffff1f;
+  border-radius: 14px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.ride:hover {
-    transform: translateY(-6px);
-    background-color: #ffffff0f;
-    border-color: #f0a45d;
+.ride-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.city-image {
+  object-position: center top;
+}
+
+.mountain-image {
+  object-position: center 60%;
+}
+
+.ride-content {
+  padding: 28px;
+}
+
+.ride-number {
+  color: #b7bec3;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .ride h2 {
-    margin: 0 0 18px;
-    font-size: 25px;
-    line-height: 1.4;
-    color: #f0a45d;
+  margin: 12px 0;
+  color: #f0a45d;
+  font-size: 25px;
+  line-height: 1.4;
 }
 
 .ride p {
-    margin: 0;
-    font-size: 17px;
-    color: #c5c9cc;
+  margin: 0;
+  color: #c3c9cd;
+  font-size: 16px;
 }
 
 .actions {
-    margin-top: 45px;
-    text-align: center;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .button {
-    display: inline-block;
-    padding: 14px 30px;
-    border: 2px solid transparent;
-    border-radius: 6px;
-
-    background-color: #f0a45d;
-    color: #15191d;
-
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-
-    transition:
-        background-color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.button:hover {
-    background-color: #ffc080;
-    transform: translateY(-3px);
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #f0a45d;
+  color: #171b1f;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .button:focus-visible {
-    outline: 3px solid #ffffff;
-    outline-offset: 5px;
+  outline: 3px solid #ffffff;
+  outline-offset: 5px;
+}
+
+.travel {
+  margin: 55px 0 0;
+  overflow: hidden;
+  border: 1px solid #ffffff1f;
+  border-radius: 14px;
+  background-color: #20272c;
+  scroll-margin-top: 24px;
 }
 
 .travel-image {
-    display: block;
-    width: 100%;
-    height: 350px;
-    margin-top: 65px;
-    object-fit: cover;
-    border-radius: 12px;
+  width: 100%;
+  height: clamp(260px, 40vw, 460px);
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.travel figcaption {
+  padding: 16px 20px;
+  color: #c3c9cd;
+  font-size: 15px;
+  text-align: center;
 }
 
 footer {
-    padding: 25px 20px;
-    border-top: 1px solid #ffffff1f;
-    text-align: center;
-    color: #9ca4aa;
-    font-size: 14px;
+  padding: 24px;
+  border-top: 1px solid #ffffff1f;
+  color: #9fa8ae;
+  text-align: center;
+  font-size: 13px;
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
+}
+
+@media (hover: hover) {
+  .ride:hover {
+    transform: translateY(-5px);
+    border-color: #f0a45d;
+    box-shadow: 0 14px 30px #00000033;
+  }
+
+  .button:hover {
+    background-color: #ffb978;
+    transform: translateY(-2px);
+  }
 }
 
 @media (max-width: 768px) {
-    main {
-        padding: 60px 20px;
-    }
+  main {
+    padding: 55px 20px 50px;
+  }
 
-    h1 {
-        font-size: 36px;
-        margin-bottom: 40px;
-    }
+  .intro {
+    margin-bottom: 35px;
+  }
 
-    .rides {
-        flex-direction: column;
-        gap: 24px;
-    }
+  .intro-text {
+    font-size: 15px;
+  }
 
-    .ride {
-        padding: 28px;
-    }
+  .rides {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 
-    .ride h2 {
-        font-size: 22px;
-    }
+  .ride-image {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
 
-    .travel-image {
-        height: 250px;
-        margin-top: 40px;
-    }
+  .ride-content {
+    padding: 24px;
+  }
+
+  .ride h2 {
+    font-size: 23px;
+  }
+
+  .travel {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
+  main {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 
-    .ride {
-        padding: 22px;
-    }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
 
-    .ride p {
-        font-size: 16px;
-    }
+  .ride-content {
+    padding: 20px;
+  }
 
-    .button {
-        width: 100%;
-    }
+  .button {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .ride,
-    .button {
-        transition: none;
-    }
+  html {
+    scroll-behavior: auto;
+  }
 
-    .ride:hover,
-    .button:hover {
-        transform: none;
-    }
+  .ride,
+  .button {
+    transition: none;
+    transform: none;
+  }
 }
